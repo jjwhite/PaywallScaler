@@ -1,0 +1,30 @@
+{
+    "name": "Paywall Scaler",
+    "version": "0.1",
+    "icons": {
+        "16": "/img/icons/icon_16.png",
+        "48": "/img/icons/icon_48.png",
+        "128": "/img/icons/icon_128.png"
+    },
+
+    "description": "Open links to paywalled sites in incognito tab",
+    "permissions": [
+        "tabs"
+    ],
+	
+	"background" : {
+		"persistent" : true,
+		"scripts" : ["/js/external/jquery.js","/js/content_script.js"]
+	},
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": [
+                    "/js/external/jquery.js",
+                    "/js/content_script.js"
+                ]
+        }
+    ],
+
+    "manifest_version": 2
+}
