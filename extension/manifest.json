@@ -13,9 +13,9 @@
     ],
 	
 	"background" : {
-		"persistent" : true,
-		"scripts" : ["/js/external/jquery.js","/js/content_script.js"]
+		"page" : "background.html"
 	},
+	
     "content_scripts": [
         {
             "matches": ["<all_urls>"],
